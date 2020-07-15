@@ -598,6 +598,7 @@ function updatePrompt() {
 
   PS1="${NEW_PROMPT//_LAST_COMMAND_INDICATOR_/${LAST_COMMAND_INDICATOR}${ResetColor}}"
   command rm "${GIT_INDEX_PRIVATE}" 2>/dev/null
+  history -a; history -c; history -r
 }
 
 # Helper function that returns virtual env information to be set in prompt
